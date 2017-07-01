@@ -4,58 +4,78 @@ import re
 import os
 import urllib
 import urllib2
+from poster.encode import multipart_encode
+from poster.streaminghttp import register_openers
+
 def btdiggtop10get(link):
-    referer_link="http://btdigg.org"
+    print("btdigg")
+    register_openers()
+    datagen,headers=multipart_encode({"keyword":link})
+    #referer_link="http://btdigg.co/"
 #    list_symbol=r'<tr><td class=.+?\.title="Download via magnet-link '
-    symbol=r'magnet:.+? '
-    titlesymbol=r'>.+?</a></td></tr></table>'
+    symbol=r"magnet:.+?'"
+    titlesymbol=r'target="_blank">.+?</a>'
 #    symbol0=re.compile(list_symbol)
     symbol1=re.compile(symbol)
     symbol2=re.compile(titlesymbol)
     a=urllib2.Request(link)
-    a.add_header('Accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8')
-    a.add_header('Referer',referer_link)
-    a.add_header("User-Agent", 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_4) AppleWebKit/600.7.12 (KHTML, like Gecko) Version/8.0.7 Safari/600.7.12')
-    print('pass')
-    b=urllib2.urlopen(a).read()
-    print('read')
+    headers["Accept"]="text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8"
+    headers["Connection"]="keep-alive"
+    headers["Referer"]="http://btdigg.co/"
+    headers["User-Agent"]="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"
+    print(headers)
+    request1=urllib2.Request("http://btdigg.co/",datagen,headers)
+    response1=urllib2.urlopen(request1)
+    str1=response1.read()
     #print(b)
     #contentlist=re.findall(symbol0,b)
-    magnetlist=re.findall(symbol1,b)
-    print(magnetlist)
+    maglnk=re.findall("magnet:?.+?'", str1)
+    for i in xrange(len(maglnk)):
+        maglnk[i]=maglnk[i].split("'")[0]
+    print(maglnk)
+    print(len(maglnk))
     #print(magnetlist)
-    i=0
-    while i<len(magnetlist):
-        magnetlist[i]=magnetlist[i].split('"')[0]
-        #print(magnetlist[i])
-        i=i+1
-    titlelist=re.findall(symbol2,b)
-    print(titlelist)
-    i=0
-    while i<len(titlelist):
-        titlelist[i]=titlelist[i].split('</a></td></tr></table>')[-2]
-        titlelist[i]=titlelist[i].split('>')[-1]
-        i=i+1
+    # i=0
+    # while i<len(magnetlist):
+    #     magnetlist[i]=magnetlist[i].split('"')[0]
+    #     #print(magnetlist[i])
+    #     i=i+1
+    titlelist_=re.findall(symbol2,str1)
+    print(titlelist_)
+    print(len(titlelist_))
+    titlelist=[]
+    temp=[]
+    for i in titlelist_:
+        if i.startswith('target="_blank"><img'):
+            pass
+        else:
+            temp.append(i)
+    for i in xrange(len(temp)):
+        titlelist.append(re.sub(".+?</script>","","".join("".join("".join(temp[i].split('target="_blank">')[1].split("<b>")).split("</b>")).split("</a>"))))
+        #titlelist[i]=titlelist[i].split('</a>')[-0].split("</b>")[1]
     #magnetlist.extend(findmagnet)
     #titlelist.extend(findtitle)
     outputlist=[]
-    for title in titlelist:
-        if title.startswith('Files') or title.startswith('Next \xe2\x86\x92'):
-            titlelist.remove(title)
-    print(titlelist)
+    # for title in titlelist:
+    #     if title.startswith('Files') or title.startswith('Next \xe2\x86\x92'):
+    #         titlelist.remove(title)
+    for i in titlelist:
+        print(i)
     print(len(titlelist))
     try:
         i=0
-        while i<10 and i<len(magnetlist):
-            outputlist.append(titlelist[i]+'\n'+magnetlist[i])
+        while i<len(maglnk):
+            outputlist.append(titlelist[i]+'\n'+maglnk[i])
             i+=1
         return outputlist
     except:
         i=2
         while i<len(titlelist):
-            outputlist.append(titlelist[i]+'\n'+magnetlist[i])
+            outputlist.append(titlelist[i]+'\n'+maglnk[i])
             i+=1
         return outputlist
+if __name__=="__main__":
+    btdiggtop10get("SPS-005")
 #    while i<10:
 #        outputlist.append(titlelist[i]+'\n'+magnetlist[i])
 #        i=i+1
