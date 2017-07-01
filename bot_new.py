@@ -24,7 +24,7 @@ def pixiv_get(bot,pixiv_id):
         bot.sendMessage(chat_id=chatid,text="error......")
     del aaaa
 
-bot=telegram.Bot('137337237:AAGBjQzeQHUZk4392cgASTBV3NdxRUM5pR0')
+bot=telegram.Bot('yours:yours')
 try:
     last_update_id=bot.getUpdates()[-1].update_id
 except IndexError:
