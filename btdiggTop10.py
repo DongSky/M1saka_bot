@@ -3,14 +3,16 @@
 import re
 import os
 import urllib
-import urllib2
-from poster.encode import multipart_encode
-from poster.streaminghttp import register_openers
+#import urllib.parse
+#import urllib.request
+import requests
+# from poster.encode import multipart_encode
+# from poster.streaminghttp import register_openers
 
 def btdiggtop10get(link):
-    print("btdigg")
-    register_openers()
-    datagen,headers=multipart_encode({"keyword":link})
+    print(link)
+    #register_openers()
+    #datagen,headers=multipart_encode({"keyword":link})
     #referer_link="http://btdigg.co/"
 #    list_symbol=r'<tr><td class=.+?\.title="Download via magnet-link '
     symbol=r"magnet:.+?'"
@@ -18,19 +20,19 @@ def btdiggtop10get(link):
 #    symbol0=re.compile(list_symbol)
     symbol1=re.compile(symbol)
     symbol2=re.compile(titlesymbol)
-    a=urllib2.Request(link)
+    #a=urllib.request.Request(link)
+    headers={}
     headers["Accept"]="text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8"
     headers["Connection"]="keep-alive"
     headers["Referer"]="http://btdigg.co/"
     headers["User-Agent"]="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"
-    print(headers)
-    request1=urllib2.Request("http://btdigg.co/",datagen,headers)
-    response1=urllib2.urlopen(request1)
-    str1=response1.read()
+    #print(headers)
+    request1=requests.post("http://btdigg.co/",data={"keyword":link},headers=headers)
+    str1=request1.content
     #print(b)
     #contentlist=re.findall(symbol0,b)
-    maglnk=re.findall("magnet:?.+?'", str1)
-    for i in xrange(len(maglnk)):
+    maglnk=re.findall("magnet:?.+?'", str1.decode('utf-8'))
+    for i in range(len(maglnk)):
         maglnk[i]=maglnk[i].split("'")[0]
     print(maglnk)
     print(len(maglnk))
@@ -40,7 +42,7 @@ def btdiggtop10get(link):
     #     magnetlist[i]=magnetlist[i].split('"')[0]
     #     #print(magnetlist[i])
     #     i=i+1
-    titlelist_=re.findall(symbol2,str1)
+    titlelist_=re.findall(symbol2,str1.decode('utf-8'))
     print(titlelist_)
     print(len(titlelist_))
     titlelist=[]
@@ -50,7 +52,7 @@ def btdiggtop10get(link):
             pass
         else:
             temp.append(i)
-    for i in xrange(len(temp)):
+    for i in range(len(temp)):
         titlelist.append(re.sub(".+?</script>","","".join("".join("".join(temp[i].split('target="_blank">')[1].split("<b>")).split("</b>")).split("</a>"))))
         #titlelist[i]=titlelist[i].split('</a>')[-0].split("</b>")[1]
     #magnetlist.extend(findmagnet)
@@ -75,7 +77,7 @@ def btdiggtop10get(link):
             i+=1
         return outputlist
 if __name__=="__main__":
-    btdiggtop10get("SPS-005")
+    btdiggtop10get("冰果")
 #    while i<10:
 #        outputlist.append(titlelist[i]+'\n'+magnetlist[i])
 #        i=i+1
