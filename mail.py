@@ -18,21 +18,13 @@ receive_mail(Subject=None,From=None,Timeperiod=None)	return msg(object)
 print_info(msg,indent=0)	return None
 get_texts(msg)	return text(str)
 
-
 please complete your mail info in this code
 smtp_host=#"smtp.126.com"
 pop_host=#"pop.126.com"
 mail_user=
 mail_pass=
-mail_from="Akaisora<%s>"%mail_user
+mail_from=
 """
-
-
-# smtp_host=#"smtp.126.com"
-# pop_host=#"pop.126.com"
-# mail_user=
-# mail_pass=
-# mail_from="Akaisora<%s>"%mail_user
 def send(smtp_host,mail_user,mail_pass,to_list,subject,text=None,image=None,attachment=None):
 	"""to_list=list/str   subject=str   text=list/str/None   image=list/str/None   attachment=list/str/None"""
 	if not isinstance(to_list,(list,tuple)):to_list=[to_list]

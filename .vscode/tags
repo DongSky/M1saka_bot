@@ -1,0 +1,677 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+AES	../NEMbox/api.py	/^from Crypto.Cipher import AES$/;"	kind:namespace	line:31
+API_KEY	../ocr.py	/^API_KEY = "LaXRhMQpNFpGtwRO8ubFkKkz"$/;"	kind:variable	line:7
+APP_ID	../ocr.py	/^APP_ID = "10436805"$/;"	kind:variable	line:6
+AipOcr	../ocr.py	/^from aip import AipOcr$/;"	kind:namespace	line:5
+BINDABLE	../NEMbox/menu.py	/^    BINDABLE = False$/;"	kind:variable	line:47
+BINDABLE	../NEMbox/menu.py	/^    BINDABLE = False$/;"	kind:variable	line:49
+BeautifulSoup	../NEMbox/api.py	/^from bs4 import BeautifulSoup$/;"	kind:namespace	line:33
+Cache	../NEMbox/cache.py	/^class Cache(Singleton):$/;"	kind:class	line:29
+Cache	../NEMbox/menu.py	/^from .cache import Cache$/;"	kind:namespace	line:37
+Cache	../NEMbox/player.py	/^from .cache import Cache$/;"	kind:namespace	line:31
+CommandHandler	../bot2017.py	/^from telegram.ext import (Updater, CommandHandler, MessageHandler, Filters, RegexHandler,ConversationHandler)$/;"	kind:namespace	line:3
+CommandHandler	../qna.py	/^from telegram.ext import (Updater, CommandHandler, MessageHandler, Filters, RegexHandler,ConversationHandler)$/;"	kind:namespace	line:5
+Config	../NEMbox/api.py	/^from NEMbox.config import Config$/;"	kind:namespace	line:36
+Config	../NEMbox/cache.py	/^from .config import Config$/;"	kind:namespace	line:21
+Config	../NEMbox/config.py	/^class Config(Singleton):$/;"	kind:class	line:21
+Config	../NEMbox/menu.py	/^from .config import Config$/;"	kind:namespace	line:34
+Config	../NEMbox/osdlyrics.py	/^from .config import Config$/;"	kind:namespace	line:17
+Config	../NEMbox/player.py	/^from .config import Config$/;"	kind:namespace	line:32
+Config	../NEMbox/ui.py	/^from .config import Config$/;"	kind:namespace	line:24
+Constant	../NEMbox/cache.py	/^from .const import Constant$/;"	kind:namespace	line:20
+Constant	../NEMbox/config.py	/^from .const import Constant$/;"	kind:namespace	line:15
+Constant	../NEMbox/const.py	/^class Constant(object):$/;"	kind:class	line:12
+Constant	../NEMbox/menu.py	/^from .const import Constant$/;"	kind:namespace	line:33
+Constant	../NEMbox/storage.py	/^from .const import Constant$/;"	kind:namespace	line:16
+ConversationHandler	../bot2017.py	/^from telegram.ext import (Updater, CommandHandler, MessageHandler, Filters, RegexHandler,ConversationHandler)$/;"	kind:namespace	line:3
+ConversationHandler	../qna.py	/^from telegram.ext import (Updater, CommandHandler, MessageHandler, Filters, RegexHandler,ConversationHandler)$/;"	kind:namespace	line:5
+Description	../description.py	/^def Description(name):$/;"	kind:function	line:13
+ET	../NEMbox/menu.py	/^import xml.etree.cElementTree as ET$/;"	kind:namespace	line:26
+FILE_NAME	../NEMbox/logger.py	/^FILE_NAME = const.Constant.log_path$/;"	kind:variable	line:18
+Filters	../bot2017.py	/^from telegram.ext import (Updater, CommandHandler, MessageHandler, Filters, RegexHandler,ConversationHandler)$/;"	kind:namespace	line:3
+Filters	../qna.py	/^from telegram.ext import (Updater, CommandHandler, MessageHandler, Filters, RegexHandler,ConversationHandler)$/;"	kind:namespace	line:5
+LWPCookieJar	../NEMbox/api.py	/^from http.cookiejar import LWPCookieJar$/;"	kind:namespace	line:32
+Lyrics	../NEMbox/osdlyrics.py	/^    class Lyrics(QtGui.QWidget):$/;"	kind:class	line:33
+LyricsAdapter	../NEMbox/osdlyrics.py	/^    class LyricsAdapter(QtDBus.QDBusAbstractAdaptor):$/;"	kind:class	line:99
+MIMEImage	../mail.py	/^from email.mime.image import MIMEImage$/;"	kind:namespace	line:7
+MIMEMultipart	../mail.py	/^from email.mime.multipart import MIMEMultipart$/;"	kind:namespace	line:6
+MIMEText	../mail.py	/^from email.mime.text import MIMEText$/;"	kind:namespace	line:5
+Menu	../NEMbox/menu.py	/^class Menu(object):$/;"	kind:class	line:105
+MessageHandler	../bot2017.py	/^from telegram.ext import (Updater, CommandHandler, MessageHandler, Filters, RegexHandler,ConversationHandler)$/;"	kind:namespace	line:3
+MessageHandler	../qna.py	/^from telegram.ext import (Updater, CommandHandler, MessageHandler, Filters, RegexHandler,ConversationHandler)$/;"	kind:namespace	line:5
+NEMbox	../netease_music_lib.py	/^import NEMbox.api$/;"	kind:namespace	line:6
+NetEase	../NEMbox/api.py	/^class NetEase(object):$/;"	kind:class	line:162
+NetEase	../NEMbox/cache.py	/^from .api import NetEase$/;"	kind:namespace	line:23
+NetEase	../NEMbox/menu.py	/^from .api import NetEase$/;"	kind:namespace	line:29
+NetEase	../NEMbox/player.py	/^from .api import NetEase$/;"	kind:namespace	line:30
+NetEase	../NEMbox/ui.py	/^from .api import NetEase$/;"	kind:namespace	line:21
+NeteaseMusic	../netease_music_lib.py	/^class NeteaseMusic(object):$/;"	kind:class	line:9
+OCR	../ocr.py	/^def OCR(name):$/;"	kind:function	line:15
+OPTIONS	../ocr.py	/^OPTIONS = {$/;"	kind:variable	line:9
+Parser	../mail.py	/^from email.parser import Parser$/;"	kind:namespace	line:10
+Player	../NEMbox/menu.py	/^from .player import Player$/;"	kind:namespace	line:30
+Player	../NEMbox/player.py	/^class Player(object):$/;"	kind:class	line:38
+Process	../NEMbox/osdlyrics.py	/^from multiprocessing import Process$/;"	kind:namespace	line:14
+QNA_COMMAND_BTDIGG	../status_code.py	/^QNA_COMMAND_BTDIGG = 600$/;"	kind:variable	line:5
+QNA_COMMAND_DESCRIPTION	../status_code.py	/^QNA_COMMAND_DESCRIPTION = 400$/;"	kind:variable	line:4
+QNA_COMMAND_MAIL	../status_code.py	/^QNA_COMMAND_MAIL = 1600$/;"	kind:variable	line:10
+QNA_COMMAND_OCR	../status_code.py	/^QNA_COMMAND_OCR = 200$/;"	kind:variable	line:3
+QNA_COMMAND_PIXIV	../status_code.py	/^QNA_COMMAND_PIXIV = 1400$/;"	kind:variable	line:9
+QNA_COMMAND_SHORTLINK	../status_code.py	/^QNA_COMMAND_SHORTLINK = 1000$/;"	kind:variable	line:7
+QNA_COMMAND_SONG	../status_code.py	/^QNA_COMMAND_SONG = 1800/;"	kind:variable	line:11
+QNA_COMMAND_TRANSLATE	../status_code.py	/^QNA_COMMAND_TRANSLATE = 1200$/;"	kind:variable	line:8
+QNA_COMMAND_WEATHER	../status_code.py	/^QNA_COMMAND_WEATHER = 800$/;"	kind:variable	line:6
+QNA_INVALID	../status_code.py	/^QNA_INVALID = -1$/;"	kind:variable	line:2
+QtCore	../NEMbox/osdlyrics.py	/^    from PyQt4 import QtGui, QtCore, QtDBus$/;"	kind:namespace	line:24
+QtDBus	../NEMbox/osdlyrics.py	/^    from PyQt4 import QtGui, QtCore, QtDBus$/;"	kind:namespace	line:24
+QtGui	../NEMbox/osdlyrics.py	/^    from PyQt4 import QtGui, QtCore, QtDBus$/;"	kind:namespace	line:24
+RegexHandler	../bot2017.py	/^from telegram.ext import (Updater, CommandHandler, MessageHandler, Filters, RegexHandler,ConversationHandler)$/;"	kind:namespace	line:3
+RegexHandler	../qna.py	/^from telegram.ext import (Updater, CommandHandler, MessageHandler, Filters, RegexHandler,ConversationHandler)$/;"	kind:namespace	line:5
+ReplyKeyboardMarkup	../bot2017.py	/^from telegram import (ReplyKeyboardMarkup, ReplyKeyboardRemove)$/;"	kind:namespace	line:2
+ReplyKeyboardMarkup	../qna.py	/^from telegram import (ReplyKeyboardMarkup, ReplyKeyboardRemove)$/;"	kind:namespace	line:4
+ReplyKeyboardRemove	../bot2017.py	/^from telegram import (ReplyKeyboardMarkup, ReplyKeyboardRemove)$/;"	kind:namespace	line:2
+ReplyKeyboardRemove	../qna.py	/^from telegram import (ReplyKeyboardMarkup, ReplyKeyboardRemove)$/;"	kind:namespace	line:4
+SECRET_KEY	../ocr.py	/^SECRET_KEY = "kv626uuc02e0rx86q6ijXT6gpBeBE8m6"$/;"	kind:variable	line:8
+Singleton	../NEMbox/cache.py	/^from .singleton import Singleton$/;"	kind:namespace	line:22
+Singleton	../NEMbox/config.py	/^from .singleton import Singleton$/;"	kind:namespace	line:14
+Singleton	../NEMbox/singleton.py	/^class Singleton(object):$/;"	kind:class	line:1
+Singleton	../NEMbox/storage.py	/^from .singleton import Singleton$/;"	kind:namespace	line:17
+Storage	../NEMbox/api.py	/^from NEMbox.storage import Storage$/;"	kind:namespace	line:37
+Storage	../NEMbox/menu.py	/^from .storage import Storage$/;"	kind:namespace	line:36
+Storage	../NEMbox/player.py	/^from .storage import Storage$/;"	kind:namespace	line:29
+Storage	../NEMbox/storage.py	/^class Storage(Singleton):$/;"	kind:class	line:21
+Storage	../NEMbox/ui.py	/^from .storage import Storage$/;"	kind:namespace	line:23
+Tag	../tag.py	/^def Tag(name):$/;"	kind:function	line:7
+Ui	../NEMbox/menu.py	/^from .ui import Ui$/;"	kind:namespace	line:31
+Ui	../NEMbox/player.py	/^from .ui import Ui$/;"	kind:namespace	line:28
+Ui	../NEMbox/ui.py	/^class Ui(object):$/;"	kind:class	line:50
+Updater	../bot2017.py	/^from telegram.ext import (Updater, CommandHandler, MessageHandler, Filters, RegexHandler,ConversationHandler)$/;"	kind:namespace	line:3
+Updater	../qna.py	/^from telegram.ext import (Updater, CommandHandler, MessageHandler, Filters, RegexHandler,ConversationHandler)$/;"	kind:namespace	line:5
+__init__	../NEMbox/api.py	/^    def __init__(self):$/;"	kind:member	line:164
+__init__	../NEMbox/cache.py	/^    def __init__(self):$/;"	kind:member	line:31
+__init__	../NEMbox/config.py	/^    def __init__(self):$/;"	kind:member	line:23
+__init__	../NEMbox/menu.py	/^    def __init__(self):$/;"	kind:member	line:107
+__init__	../NEMbox/osdlyrics.py	/^        def __init__(self):$/;"	kind:member	line:35
+__init__	../NEMbox/osdlyrics.py	/^        def __init__(self, parent):$/;"	kind:member	line:109
+__init__	../NEMbox/player.py	/^    def __init__(self):$/;"	kind:member	line:40
+__init__	../NEMbox/scrollstring.py	/^    def __init__(self, content, START):$/;"	kind:member	line:17
+__init__	../NEMbox/storage.py	/^    def __init__(self):$/;"	kind:member	line:23
+__init__	../NEMbox/ui.py	/^    def __init__(self):$/;"	kind:member	line:52
+__init__	../netease_music_lib.py	/^    def __init__(self):$/;"	kind:member	line:10
+__init__.py	../NEMbox/__init__.py	1;"	kind:file	line:1
+__new__	../NEMbox/singleton.py	/^    def __new__(cls, *args, **kwargs):$/;"	kind:member	line:15
+__repr__	../NEMbox/scrollstring.py	/^    def __repr__(self):$/;"	kind:member	line:37
+_dec_idx	../NEMbox/player.py	/^    def _dec_idx(self):$/;"	kind:member	line:377
+_decode_str	../mail.py	/^def _decode_str(s):$/;"	kind:function	line:225
+_get_terminal_size_linux	../NEMbox/terminalsize.py	/^def _get_terminal_size_linux():$/;"	kind:function	line:74
+_get_terminal_size_tput	../NEMbox/terminalsize.py	/^def _get_terminal_size_tput():$/;"	kind:function	line:62
+_get_terminal_size_windows	../NEMbox/terminalsize.py	/^def _get_terminal_size_windows():$/;"	kind:function	line:42
+_guess_charset	../mail.py	/^def _guess_charset(msg):$/;"	kind:function	line:231
+_inc_idx	../NEMbox/player.py	/^    def _inc_idx(self):$/;"	kind:member	line:373
+_is_cache_successful	../NEMbox/cache.py	/^    def _is_cache_successful(self):$/;"	kind:member	line:46
+_is_idx_valid	../NEMbox/player.py	/^    def _is_idx_valid(self):$/;"	kind:member	line:370
+_is_playlist_empty	../NEMbox/menu.py	/^    def _is_playlist_empty(self):$/;"	kind:member	line:179
+_kill	../NEMbox/cache.py	/^        def _kill(p):$/;"	kind:function	line:52
+_kill_all	../NEMbox/cache.py	/^    def _kill_all(self):$/;"	kind:member	line:51
+_mkdir	../NEMbox/cache.py	/^    def _mkdir(self, name):$/;"	kind:member	line:59
+_need_to_shuffle	../NEMbox/player.py	/^    def _need_to_shuffle(self):$/;"	kind:member	line:381
+_swap_song	../NEMbox/player.py	/^    def _swap_song(self):$/;"	kind:member	line:365
+absolute_import	../NEMbox/api.py	/^from __future__ import absolute_import$/;"	kind:namespace	line:11
+absolute_import	../NEMbox/cache.py	/^from __future__ import absolute_import$/;"	kind:namespace	line:10
+absolute_import	../NEMbox/config.py	/^from __future__ import absolute_import$/;"	kind:namespace	line:6
+absolute_import	../NEMbox/const.py	/^from __future__ import absolute_import$/;"	kind:namespace	line:6
+absolute_import	../NEMbox/logger.py	/^from __future__ import absolute_import$/;"	kind:namespace	line:9
+absolute_import	../NEMbox/menu.py	/^from __future__ import absolute_import$/;"	kind:namespace	line:11
+absolute_import	../NEMbox/osdlyrics.py	/^from __future__ import absolute_import$/;"	kind:namespace	line:9
+absolute_import	../NEMbox/player.py	/^from __future__ import absolute_import$/;"	kind:namespace	line:13
+absolute_import	../NEMbox/scrollstring.py	/^from __future__ import absolute_import$/;"	kind:namespace	line:7
+absolute_import	../NEMbox/storage.py	/^from __future__ import absolute_import$/;"	kind:namespace	line:10
+absolute_import	../NEMbox/terminalsize.py	/^from __future__ import absolute_import$/;"	kind:namespace	line:5
+absolute_import	../NEMbox/ui.py	/^from __future__ import absolute_import$/;"	kind:namespace	line:11
+absolute_import	../NEMbox/utils.py	/^from __future__ import absolute_import$/;"	kind:namespace	line:9
+add	../NEMbox/cache.py	/^    def add(self, song_id, song_name, artist, url, onExit):$/;"	kind:member	line:118
+addstr	../NEMbox/ui.py	/^    def addstr(self, *args):$/;"	kind:member	line:88
+aesEncrypt	../NEMbox/api.py	/^def aesEncrypt(text, secKey):$/;"	kind:function	line:105
+album	../NEMbox/api.py	/^    def album(self, album_id):$/;"	kind:member	line:479
+api	../netease_music_lib.py	/^import NEMbox.api$/;"	kind:namespace	line:6
+api.py	../NEMbox/api.py	1;"	kind:file	line:1
+app	../netease_music_lib.py	/^    app = NeteaseMusic()$/;"	kind:variable	line:57
+append_songs	../NEMbox/player.py	/^    def append_songs(self, datalist):$/;"	kind:member	line:277
+artists	../NEMbox/api.py	/^    def artists(self, artist_id):$/;"	kind:member	line:459
+base64	../NEMbox/api.py	/^import base64$/;"	kind:namespace	line:28
+base64	../description.py	/^import base64$/;"	kind:namespace	line:6
+binascii	../NEMbox/api.py	/^import binascii$/;"	kind:namespace	line:29
+bind_keys	../NEMbox/menu.py	/^    def bind_keys(self):$/;"	kind:member	line:203
+bingsearch.py	../bingsearch.py	1;"	kind:file	line:1
+bot2017.py	../bot2017.py	1;"	kind:file	line:1
+break_str	../NEMbox/ui.py	/^def break_str(s, start, max_len=80):$/;"	kind:function	line:40
+btdiggTop10	../bot2017.py	/^import btdiggTop10$/;"	kind:namespace	line:12
+btdiggTop10	../qna.py	/^import btdiggTop10$/;"	kind:namespace	line:13
+btdiggTop10.py	../btdiggTop10.py	1;"	kind:file	line:1
+btdigg_get	../bot2017.py	/^def btdigg_get(bot,update):$/;"	kind:function	line:42
+btdigg_get	../qna.py	/^def btdigg_get(bot,update):$/;"	kind:function	line:37
+btdigg_start	../bot2017.py	/^def btdigg_start(bot, update):$/;"	kind:function	line:39
+btdigg_start	../qna.py	/^def btdigg_start(bot, update):$/;"	kind:function	line:34
+btdiggtop10get	../btdiggTop10.py	/^def btdiggtop10get(link):$/;"	kind:function	line:12
+build_loading	../NEMbox/ui.py	/^    def build_loading(self):$/;"	kind:member	line:260
+build_login	../NEMbox/ui.py	/^    def build_login(self):$/;"	kind:member	line:564
+build_login_bar	../NEMbox/ui.py	/^    def build_login_bar(self):$/;"	kind:member	line:579
+build_login_error	../NEMbox/ui.py	/^    def build_login_error(self):$/;"	kind:member	line:590
+build_menu	../NEMbox/ui.py	/^    def build_menu(self, datatype, title, datalist, offset, index, step,$/;"	kind:member	line:266
+build_playinfo	../NEMbox/ui.py	/^    def build_playinfo(self,$/;"	kind:member	line:100
+build_process_bar	../NEMbox/ui.py	/^    def build_process_bar(self, now_playing, total_length, playing_flag,$/;"	kind:member	line:127
+build_search	../NEMbox/ui.py	/^    def build_search(self, stype):$/;"	kind:member	line:493
+build_timing	../NEMbox/ui.py	/^    def build_timing(self):$/;"	kind:member	line:604
+cache.py	../NEMbox/cache.py	1;"	kind:file	line:1
+cacheExit	../NEMbox/player.py	/^            def cacheExit(song_id, path):$/;"	kind:function	line:199
+cacheExit	../NEMbox/player.py	/^        def cacheExit(song_id, path):$/;"	kind:function	line:524
+cacheSong	../NEMbox/player.py	/^        def cacheSong(song_id, song_name, artist, song_url):$/;"	kind:function	line:198
+cacheSong1time	../NEMbox/player.py	/^    def cacheSong1time(self, song_id, song_name, artist, song_url):$/;"	kind:member	line:523
+cancel	../bot2017.py	/^def cancel(bot, update):$/;"	kind:function	line:66
+cancel	../qna.py	/^def cancel(bot, update):$/;"	kind:function	line:60
+carousel	../NEMbox/menu.py	/^def carousel(left, right, x):$/;"	kind:function	line:58
+change_term	../NEMbox/menu.py	/^    def change_term(self, signum, frame):$/;"	kind:member	line:136
+channel_detail	../NEMbox/api.py	/^    def channel_detail(self, channelids, offset=0):$/;"	kind:member	line:592
+check_version	../NEMbox/config.py	/^    def check_version(self):$/;"	kind:member	line:150
+check_version	../NEMbox/menu.py	/^    def check_version(self):$/;"	kind:member	line:155
+check_version	../NEMbox/storage.py	/^    def check_version(self):$/;"	kind:member	line:101
+choice_channel	../NEMbox/menu.py	/^    def choice_channel(self, idx):$/;"	kind:member	line:837
+chr	../NEMbox/api.py	/^from builtins import chr$/;"	kind:namespace	line:12
+chr	../NEMbox/scrollstring.py	/^from builtins import chr$/;"	kind:namespace	line:9
+clear_mail_config	../bot2017.py	/^def clear_mail_config(bot,update):$/;"	kind:function	line:123
+clear_mail_config	../qna.py	/^def clear_mail_config(bot,update):$/;"	kind:function	line:115
+cognitive_description_proc	../bot2017.py	/^def cognitive_description_proc(bot,update):$/;"	kind:function	line:88
+cognitive_description_proc	../qna.py	/^def cognitive_description_proc(bot,update):$/;"	kind:function	line:80
+cognitive_description_request	../bot2017.py	/^def cognitive_description_request(bot,update):$/;"	kind:function	line:85
+cognitive_description_request	../qna.py	/^def cognitive_description_request(bot,update):$/;"	kind:function	line:77
+cognitive_ocr_proc	../bot2017.py	/^def cognitive_ocr_proc(bot,update):$/;"	kind:function	line:100
+cognitive_ocr_proc	../qna.py	/^def cognitive_ocr_proc(bot,update):$/;"	kind:function	line:92
+cognitive_ocr_request	../bot2017.py	/^def cognitive_ocr_request(bot,update):$/;"	kind:function	line:97
+cognitive_ocr_request	../qna.py	/^def cognitive_ocr_request(bot,update):$/;"	kind:function	line:89
+command_line.py	../command_line.py	1;"	kind:file	line:1
+commandline	../command_line.py	/^def commandline(username,command):$/;"	kind:function	line:4
+commands	../command_line.py	/^import commands$/;"	kind:namespace	line:3
+conf_dir	../NEMbox/const.py	/^    conf_dir = os.path.join(os.path.expanduser('~'), '.netease-musicbox')$/;"	kind:variable	line:13
+config	../NEMbox/osdlyrics.py	/^config = Config()$/;"	kind:variable	line:21
+config.py	../NEMbox/config.py	1;"	kind:file	line:1
+config_path	../NEMbox/const.py	/^    config_path = os.path.join(conf_dir, 'config.json')$/;"	kind:variable	line:15
+const	../NEMbox/logger.py	/^from . import const$/;"	kind:namespace	line:16
+const.py	../NEMbox/const.py	1;"	kind:file	line:1
+content_proc	../bot2017.py	/^def content_proc(bot,update):$/;"	kind:function	line:201
+content_proc	../qna.py	/^def content_proc(bot,update):$/;"	kind:function	line:191
+cookie_path	../NEMbox/const.py	/^    cookie_path = os.path.join(conf_dir, 'cookie')$/;"	kind:variable	line:17
+createSecretKey	../NEMbox/api.py	/^def createSecretKey(size):$/;"	kind:function	line:120
+create_string_buffer	../NEMbox/terminalsize.py	/^        from ctypes import windll, create_string_buffer$/;"	kind:namespace	line:44
+curses	../NEMbox/menu.py	/^import curses$/;"	kind:namespace	line:18
+curses	../NEMbox/ui.py	/^import curses$/;"	kind:namespace	line:19
+daily_signin	../NEMbox/api.py	/^    def daily_signin(self, type):$/;"	kind:member	line:282
+datetime	../mail.py	/^import os,datetime$/;"	kind:namespace	line:3
+dbus	../NEMbox/ui.py	/^    import dbus$/;"	kind:namespace	line:32
+dbus_activity	../NEMbox/ui.py	/^    dbus_activity = False$/;"	kind:variable	line:35
+dbus_activity	../NEMbox/ui.py	/^    dbus_activity = True$/;"	kind:variable	line:33
+decode_header	../mail.py	/^from email.header import decode_header$/;"	kind:namespace	line:11
+default_timeout	../NEMbox/api.py	/^default_timeout = 10$/;"	kind:variable	line:67
+description	../bot2017.py	/^import description$/;"	kind:namespace	line:6
+description	../qna.py	/^import description$/;"	kind:namespace	line:7
+description.py	../description.py	1;"	kind:file	line:1
+dig_info	../NEMbox/api.py	/^    def dig_info(self, data, dig_type):$/;"	kind:member	line:617
+dispatch_enter	../NEMbox/menu.py	/^    def dispatch_enter(self, idx):$/;"	kind:member	line:615
+division	../NEMbox/api.py	/^from __future__ import division$/;"	kind:namespace	line:10
+division	../NEMbox/cache.py	/^from __future__ import division$/;"	kind:namespace	line:9
+division	../NEMbox/config.py	/^from __future__ import division$/;"	kind:namespace	line:5
+division	../NEMbox/const.py	/^from __future__ import division$/;"	kind:namespace	line:5
+division	../NEMbox/logger.py	/^from __future__ import division$/;"	kind:namespace	line:8
+division	../NEMbox/menu.py	/^from __future__ import division$/;"	kind:namespace	line:10
+division	../NEMbox/osdlyrics.py	/^from __future__ import division$/;"	kind:namespace	line:8
+division	../NEMbox/player.py	/^from __future__ import division$/;"	kind:namespace	line:12
+division	../NEMbox/scrollstring.py	/^from __future__ import division$/;"	kind:namespace	line:4
+division	../NEMbox/storage.py	/^from __future__ import division$/;"	kind:namespace	line:9
+division	../NEMbox/terminalsize.py	/^from __future__ import division$/;"	kind:namespace	line:4
+division	../NEMbox/ui.py	/^from __future__ import division$/;"	kind:namespace	line:8
+division	../NEMbox/utils.py	/^from __future__ import division$/;"	kind:namespace	line:8
+djchannels	../NEMbox/api.py	/^    def djchannels(self, stype=0, offset=0, limit=50):$/;"	kind:member	line:575
+do_nothing	../bot2017.py	/^def do_nothing(bot,update):$/;"	kind:function	line:246
+download_dir	../NEMbox/const.py	/^    download_dir = os.path.join(conf_dir, 'cached')$/;"	kind:variable	line:14
+drawText	../NEMbox/osdlyrics.py	/^        def drawText(self, event, qp):$/;"	kind:member	line:88
+echo_request	../bot2017.py	/^def echo_request(bot, update):$/;"	kind:function	line:26
+edit_mail_content	../bot2017.py	/^def edit_mail_content(bot,update):$/;"	kind:function	line:147
+edit_mail_content	../qna.py	/^def edit_mail_content(bot,update):$/;"	kind:function	line:139
+encrypted_id	../NEMbox/api.py	/^def encrypted_id(id):$/;"	kind:function	line:81
+encrypted_request	../NEMbox/api.py	/^def encrypted_request(text):$/;"	kind:function	line:96
+error	../bot2017.py	/^def error(bot, update, error):$/;"	kind:function	line:71
+etree	../NEMbox/menu.py	/^import xml.etree.cElementTree as ET$/;"	kind:namespace	line:26
+fcntl	../NEMbox/terminalsize.py	/^            import fcntl$/;"	kind:namespace	line:77
+fm_callback	../NEMbox/menu.py	/^    def fm_callback(self):$/;"	kind:member	line:784
+fm_like	../NEMbox/api.py	/^    def fm_like(self, songid, like=True, time=25, alg='itembased'):$/;"	kind:member	line:341
+fm_trash	../NEMbox/api.py	/^    def fm_trash(self, songid, time=25, alg='RT'):$/;"	kind:member	line:356
+generate_config_file	../NEMbox/config.py	/^    def generate_config_file(self):$/;"	kind:member	line:140
+generate_shuffle_playing_list	../NEMbox/player.py	/^    def generate_shuffle_playing_list(self):$/;"	kind:member	line:253
+getLogger	../NEMbox/logger.py	/^def getLogger(name):$/;"	kind:function	line:27
+getLyric	../NEMbox/player.py	/^        def getLyric():$/;"	kind:function	line:172
+get_account	../NEMbox/ui.py	/^    def get_account(self):$/;"	kind:member	line:618
+get_artist_album	../NEMbox/api.py	/^    def get_artist_album(self, artist_id, offset=0, limit=50):$/;"	kind:member	line:468
+get_from_add	../mail.py	/^def get_from_add(msg):$/;"	kind:function	line:222
+get_item	../NEMbox/config.py	/^    def get_item(self, name):$/;"	kind:member	line:242
+get_new_fm	../NEMbox/menu.py	/^    def get_new_fm(self):$/;"	kind:member	line:827
+get_param	../NEMbox/ui.py	/^    def get_param(self, prompt_string):$/;"	kind:member	line:632
+get_password	../NEMbox/ui.py	/^    def get_password(self):$/;"	kind:member	line:625
+get_playing_id	../NEMbox/player.py	/^    def get_playing_id(self):$/;"	kind:member	line:224
+get_playing_name	../NEMbox/player.py	/^    def get_playing_name(self):$/;"	kind:member	line:227
+get_song_info_by_id	../netease_music_lib.py	/^    def get_song_info_by_id(self, song_id):$/;"	kind:member	line:23
+get_song_info_by_name	../netease_music_lib.py	/^    def get_song_info_by_name(self, name, artist=''):$/;"	kind:member	line:13
+get_terminal_size	../NEMbox/terminalsize.py	/^def get_terminal_size():$/;"	kind:function	line:20
+get_texts	../mail.py	/^def get_texts(msg):$/;"	kind:function	line:205
+get_version	../NEMbox/api.py	/^    def get_version(self):$/;"	kind:member	line:608
+gettLyric	../NEMbox/player.py	/^        def gettLyric():$/;"	kind:function	line:185
+geturl	../NEMbox/api.py	/^def geturl(song):$/;"	kind:function	line:132
+geturl_new_api	../NEMbox/api.py	/^def geturl_new_api(song):$/;"	kind:function	line:154
+hashlib	../NEMbox/api.py	/^import hashlib$/;"	kind:namespace	line:26
+hashlib	../NEMbox/ui.py	/^import hashlib$/;"	kind:namespace	line:17
+hashlib	../translate.py	/^import requests,hashlib,random,sys$/;"	kind:namespace	line:7
+home	../NEMbox/menu.py	/^home = os.path.expanduser('~')$/;"	kind:variable	line:53
+httpRequest	../NEMbox/api.py	/^    def httpRequest(self,$/;"	kind:member	line:206
+initUI	../NEMbox/osdlyrics.py	/^        def initUI(self):$/;"	kind:member	line:40
+int	../NEMbox/api.py	/^from builtins import int$/;"	kind:namespace	line:13
+int	../NEMbox/scrollstring.py	/^from builtins import int$/;"	kind:namespace	line:8
+int	../NEMbox/terminalsize.py	/^from builtins import int$/;"	kind:namespace	line:6
+int	../NEMbox/ui.py	/^from builtins import int$/;"	kind:namespace	line:14
+ioctl_GWINSZ	../NEMbox/terminalsize.py	/^    def ioctl_GWINSZ(fd):$/;"	kind:function	line:75
+is_chinese	../translate.py	/^def is_chinese(s):$/;"	kind:function	line:42
+json	../NEMbox/api.py	/^import json$/;"	kind:namespace	line:24
+json	../NEMbox/config.py	/^import json$/;"	kind:namespace	line:10
+json	../NEMbox/storage.py	/^import json$/;"	kind:namespace	line:14
+json	../bingsearch.py	/^import requests,json,os,sys,urllib$/;"	kind:namespace	line:4
+json	../bot2017.py	/^import logging,os,urllib,json$/;"	kind:namespace	line:4
+json	../description.py	/^import sys,json,os,urllib$/;"	kind:namespace	line:2
+json	../netease_music_lib.py	/^import json,sys$/;"	kind:namespace	line:2
+json	../ocr.py	/^import sys,json,os,urllib$/;"	kind:namespace	line:2
+json	../qna.py	/^import logging,os,urllib,json$/;"	kind:namespace	line:16
+json	../shortlink.py	/^import json,sys,urllib$/;"	kind:namespace	line:1
+json	../tag.py	/^import sys,json,os,urllib$/;"	kind:namespace	line:2
+json	../weatherinfo.py	/^import sys,json,urllib$/;"	kind:namespace	line:2
+key	../bingsearch.py	/^key="your key"$/;"	kind:variable	line:6
+keys	../description.py	/^keys = 'p4ADsi1FnH7eY6kaXXUqmEGfDf1N9INL'$/;"	kind:variable	line:8
+keys	../tag.py	/^keys='28d1308c55b34bc9bb6a92cac8df8b0f'$/;"	kind:variable	line:5
+knowledge_key	../qna.py	/^knowledge_key = "a5acb7d36c8d491db71b0de5225b7b6c"$/;"	kind:variable	line:17
+lang_proc	../bot2017.py	/^def lang_proc(bot,update):$/;"	kind:function	line:193
+lang_proc	../qna.py	/^def lang_proc(bot,update):$/;"	kind:function	line:185
+load	../NEMbox/storage.py	/^    def load(self):$/;"	kind:member	line:91
+locale	../NEMbox/menu.py	/^import locale$/;"	kind:namespace	line:25
+log	../NEMbox/api.py	/^log = logger.getLogger(__name__)$/;"	kind:variable	line:69
+log	../NEMbox/cache.py	/^log = logger.getLogger(__name__)$/;"	kind:variable	line:26
+log	../NEMbox/config.py	/^log = logger.getLogger(__name__)$/;"	kind:variable	line:18
+log	../NEMbox/menu.py	/^log = logger.getLogger(__name__)$/;"	kind:variable	line:43
+log	../NEMbox/osdlyrics.py	/^log = logger.getLogger(__name__)$/;"	kind:variable	line:19
+log	../NEMbox/player.py	/^log = logger.getLogger(__name__)$/;"	kind:variable	line:35
+log	../NEMbox/terminalsize.py	/^log = logger.getLogger(__name__)$/;"	kind:variable	line:17
+log	../NEMbox/ui.py	/^log = logger.getLogger(__name__)$/;"	kind:variable	line:29
+log	../NEMbox/utils.py	/^log = logger.getLogger(__name__)$/;"	kind:variable	line:17
+log_path	../NEMbox/const.py	/^    log_path = os.path.join(conf_dir, 'musicbox.log')$/;"	kind:variable	line:18
+logger	../NEMbox/api.py	/^from NEMbox import logger$/;"	kind:namespace	line:39
+logger	../NEMbox/cache.py	/^from . import logger$/;"	kind:namespace	line:24
+logger	../NEMbox/config.py	/^from . import logger$/;"	kind:namespace	line:13
+logger	../NEMbox/menu.py	/^from . import logger$/;"	kind:namespace	line:38
+logger	../NEMbox/osdlyrics.py	/^from . import logger$/;"	kind:namespace	line:16
+logger	../NEMbox/player.py	/^from . import logger$/;"	kind:namespace	line:33
+logger	../NEMbox/terminalsize.py	/^from . import logger$/;"	kind:namespace	line:15
+logger	../NEMbox/ui.py	/^from . import logger$/;"	kind:namespace	line:26
+logger	../NEMbox/utils.py	/^from . import logger$/;"	kind:namespace	line:12
+logger	../bot2017.py	/^logger=logging.getLogger(__name__)$/;"	kind:variable	line:21
+logger.py	../NEMbox/logger.py	1;"	kind:file	line:1
+logging	../NEMbox/logger.py	/^import logging$/;"	kind:namespace	line:14
+logging	../bot2017.py	/^import logging,os,urllib,json$/;"	kind:namespace	line:4
+logging	../qna.py	/^import logging,os,urllib,json$/;"	kind:namespace	line:16
+login	../NEMbox/api.py	/^    def login(self, username, password):$/;"	kind:member	line:248
+mail	../bot2017.py	/^import mail$/;"	kind:namespace	line:9
+mail	../qna.py	/^import mail$/;"	kind:namespace	line:10
+mail.py	../mail.py	1;"	kind:file	line:1
+main	../bot2017.py	/^def main():$/;"	kind:function	line:273
+map	../NEMbox/api.py	/^from builtins import map$/;"	kind:namespace	line:14
+menu.py	../NEMbox/menu.py	1;"	kind:file	line:1
+modulus	../NEMbox/api.py	/^modulus = ('00e0b509f6259df8642dbc35662901477df22677ec152b5ff68ace615bb7'$/;"	kind:variable	line:71
+mouseMoveEvent	../NEMbox/osdlyrics.py	/^        def mouseMoveEvent(self, event):$/;"	kind:member	line:73
+mousePressEvent	../NEMbox/osdlyrics.py	/^        def mousePressEvent(self, event):$/;"	kind:member	line:70
+msg	../mail.py	/^	msg=receive_mail(Subject="测试邮件")$/;"	kind:variable	line:253
+ne	../NEMbox/api.py	/^    ne = NetEase()$/;"	kind:variable	line:710
+netease_music_lib	../bot2017.py	/^import netease_music_lib$/;"	kind:namespace	line:16
+netease_music_lib	../qna.py	/^import netease_music_lib$/;"	kind:namespace	line:15
+netease_music_lib.py	../netease_music_lib.py	1;"	kind:file	line:1
+new_albums	../NEMbox/api.py	/^    def new_albums(self, offset=0, limit=50):$/;"	kind:member	line:382
+new_player_list	../NEMbox/player.py	/^    def new_player_list(self, type, title, datalist, offset):$/;"	kind:member	line:260
+next	../NEMbox/player.py	/^    def next(self):$/;"	kind:member	line:427
+next_idx	../NEMbox/player.py	/^    def next_idx(self):$/;"	kind:member	line:390
+next_song	../NEMbox/menu.py	/^    def next_song(self):$/;"	kind:member	line:191
+nonce	../NEMbox/api.py	/^nonce = '0CoJUm6Qyw8W8jud'$/;"	kind:variable	line:76
+notify	../NEMbox/api.py	/^from NEMbox.utils import notify$/;"	kind:namespace	line:38
+notify	../NEMbox/menu.py	/^from .utils import notify$/;"	kind:namespace	line:35
+notify	../NEMbox/ui.py	/^    def notify(self, summary, song, album, artist):$/;"	kind:member	line:94
+notify	../NEMbox/ui.py	/^from .utils import notify$/;"	kind:namespace	line:25
+notify	../NEMbox/utils.py	/^def notify(msg, msg_type=0, t=None):$/;"	kind:function	line:43
+notify_command_linux	../NEMbox/utils.py	/^def notify_command_linux(msg, t=None):$/;"	kind:function	line:34
+notify_command_osx	../NEMbox/utils.py	/^def notify_command_osx(msg, msg_type, t=None):$/;"	kind:function	line:26
+ocr	../bot2017.py	/^import ocr$/;"	kind:namespace	line:8
+ocr	../qna.py	/^import ocr$/;"	kind:namespace	line:9
+ocr.py	../ocr.py	1;"	kind:file	line:1
+open	../NEMbox/api.py	/^from builtins import open$/;"	kind:namespace	line:15
+open	../NEMbox/config.py	/^from builtins import open$/;"	kind:namespace	line:7
+open	../NEMbox/logger.py	/^from builtins import open$/;"	kind:namespace	line:10
+open	../NEMbox/storage.py	/^from builtins import open$/;"	kind:namespace	line:11
+os	../NEMbox/api.py	/^import os$/;"	kind:namespace	line:23
+os	../NEMbox/cache.py	/^import os$/;"	kind:namespace	line:17
+os	../NEMbox/config.py	/^import os$/;"	kind:namespace	line:11
+os	../NEMbox/const.py	/^import os$/;"	kind:namespace	line:9
+os	../NEMbox/logger.py	/^import os$/;"	kind:namespace	line:13
+os	../NEMbox/menu.py	/^import os$/;"	kind:namespace	line:21
+os	../NEMbox/player.py	/^import os$/;"	kind:namespace	line:23
+os	../NEMbox/terminalsize.py	/^import os$/;"	kind:namespace	line:9
+os	../bingsearch.py	/^import requests,json,os,sys,urllib$/;"	kind:namespace	line:4
+os	../bot2017.py	/^import logging,os,urllib,json$/;"	kind:namespace	line:4
+os	../btdiggTop10.py	/^import os$/;"	kind:namespace	line:4
+os	../description.py	/^import sys,json,os,urllib$/;"	kind:namespace	line:2
+os	../mail.py	/^import os,datetime$/;"	kind:namespace	line:3
+os	../ocr.py	/^import sys,json,os,urllib$/;"	kind:namespace	line:2
+os	../pixiv_auto_get.py	/^import os$/;"	kind:namespace	line:2
+os	../pixiv_auto_get0.py	/^import os$/;"	kind:namespace	line:2
+os	../qna.py	/^import logging,os,urllib,json$/;"	kind:namespace	line:16
+os	../tag.py	/^import sys,json,os,urllib$/;"	kind:namespace	line:2
+osdlyrics.py	../NEMbox/osdlyrics.py	1;"	kind:file	line:1
+paintEvent	../NEMbox/osdlyrics.py	/^        def paintEvent(self, event):$/;"	kind:member	line:82
+parse	../bingsearch.py	/^import urllib.parse$/;"	kind:namespace	line:2
+parse	../description.py	/^import urllib.parse$/;"	kind:namespace	line:3
+parse	../netease_music_lib.py	/^import urllib.parse$/;"	kind:namespace	line:4
+parse	../ocr.py	/^import urllib.parse$/;"	kind:namespace	line:3
+parse	../pixiv_auto_get.py	/^import urllib.parse$/;"	kind:namespace	line:4
+parse	../shortlink.py	/^import urllib.parse$/;"	kind:namespace	line:2
+parse	../tag.py	/^import urllib.parse$/;"	kind:namespace	line:3
+parse	../weatherinfo.py	/^import urllib.parse$/;"	kind:namespace	line:3
+parseaddr	../mail.py	/^from email.utils import parseaddr,parsedate$/;"	kind:namespace	line:12
+parsedate	../mail.py	/^from email.utils import parseaddr,parsedate$/;"	kind:namespace	line:12
+pause	../NEMbox/player.py	/^    def pause(self):$/;"	kind:member	line:330
+personal_fm	../NEMbox/api.py	/^    def personal_fm(self):$/;"	kind:member	line:331
+phone_login	../NEMbox/api.py	/^    def phone_login(self, username, password):$/;"	kind:member	line:267
+photo	../bot2017.py	/^def photo(bot, update):$/;"	kind:function	line:29
+pixiv_auto_get	../bot2017.py	/^import pixiv_auto_get$/;"	kind:namespace	line:5
+pixiv_auto_get	../pixiv_auto_get.py	/^def pixiv_auto_get(pixiv_id):$/;"	kind:function	line:6
+pixiv_auto_get	../pixiv_auto_get0.py	/^def pixiv_auto_get(pixiv_id):$/;"	kind:function	line:5
+pixiv_auto_get	../qna.py	/^import pixiv_auto_get$/;"	kind:namespace	line:6
+pixiv_auto_get.py	../pixiv_auto_get.py	1;"	kind:file	line:1
+pixiv_auto_get0.py	../pixiv_auto_get0.py	1;"	kind:file	line:1
+pixiv_id_proc	../bot2017.py	/^def pixiv_id_proc(bot, update):$/;"	kind:function	line:78
+pixiv_id_proc	../qna.py	/^def pixiv_id_proc(bot, update):$/;"	kind:function	line:70
+pixiv_id_request	../bot2017.py	/^def pixiv_id_request(bot, update):$/;"	kind:function	line:75
+pixiv_id_request	../qna.py	/^def pixiv_id_request(bot, update):$/;"	kind:function	line:67
+pixivget	../bot2017.py	/^def pixivget(bot, update):$/;"	kind:function	line:60
+pixivget	../qna.py	/^def pixivget(bot, update):$/;"	kind:function	line:55
+platform	../NEMbox/player.py	/^import platform$/;"	kind:namespace	line:26
+platform	../NEMbox/terminalsize.py	/^import platform$/;"	kind:namespace	line:12
+platform	../NEMbox/utils.py	/^import platform$/;"	kind:namespace	line:14
+play_and_pause	../NEMbox/player.py	/^    def play_and_pause(self, idx):$/;"	kind:member	line:295
+play_pause	../NEMbox/menu.py	/^    def play_pause(self):$/;"	kind:member	line:182
+player.py	../NEMbox/player.py	1;"	kind:file	line:1
+playlist_class_detail	../NEMbox/api.py	/^    def playlist_class_detail(self):$/;"	kind:member	line:415
+playlist_classes	../NEMbox/api.py	/^    def playlist_classes(self):$/;"	kind:member	line:405
+playlist_detail	../NEMbox/api.py	/^    def playlist_detail(self, playlist_id):$/;"	kind:member	line:419
+popen_recall	../NEMbox/player.py	/^    def popen_recall(self, onExit, popenArgs):$/;"	kind:member	line:61
+poplib	../mail.py	/^import poplib$/;"	kind:namespace	line:9
+pow	../NEMbox/api.py	/^from builtins import pow$/;"	kind:namespace	line:18
+prev	../NEMbox/player.py	/^    def prev(self):$/;"	kind:member	line:463
+prev_idx	../NEMbox/player.py	/^    def prev_idx(self):$/;"	kind:member	line:433
+previous_song	../NEMbox/menu.py	/^    def previous_song(self):$/;"	kind:member	line:197
+print_function	../NEMbox/api.py	/^from __future__ import print_function$/;"	kind:namespace	line:8
+print_function	../NEMbox/cache.py	/^from __future__ import print_function$/;"	kind:namespace	line:8
+print_function	../NEMbox/config.py	/^from __future__ import print_function$/;"	kind:namespace	line:4
+print_function	../NEMbox/const.py	/^from __future__ import print_function$/;"	kind:namespace	line:4
+print_function	../NEMbox/logger.py	/^from __future__ import print_function$/;"	kind:namespace	line:7
+print_function	../NEMbox/menu.py	/^from __future__ import print_function$/;"	kind:namespace	line:9
+print_function	../NEMbox/osdlyrics.py	/^from __future__ import print_function$/;"	kind:namespace	line:7
+print_function	../NEMbox/player.py	/^from __future__ import print_function$/;"	kind:namespace	line:11
+print_function	../NEMbox/scrollstring.py	/^from __future__ import print_function$/;"	kind:namespace	line:6
+print_function	../NEMbox/storage.py	/^from __future__ import print_function$/;"	kind:namespace	line:8
+print_function	../NEMbox/terminalsize.py	/^from __future__ import print_function$/;"	kind:namespace	line:2
+print_function	../NEMbox/ui.py	/^from __future__ import print_function$/;"	kind:namespace	line:10
+print_function	../NEMbox/utils.py	/^from __future__ import print_function$/;"	kind:namespace	line:7
+print_info	../mail.py	/^def print_info(msg,indent=0):$/;"	kind:function	line:172
+pubKey	../NEMbox/api.py	/^pubKey = '010001'$/;"	kind:variable	line:77
+pyqt_activity	../NEMbox/osdlyrics.py	/^    pyqt_activity = False$/;"	kind:variable	line:27
+pyqt_activity	../NEMbox/osdlyrics.py	/^    pyqt_activity = True$/;"	kind:variable	line:25
+qna	../bot2017.py	/^import qna$/;"	kind:namespace	line:14
+qna.py	../qna.py	1;"	kind:file	line:1
+qna_request	../qna.py	/^def qna_request(query_string):$/;"	kind:function	line:18
+query_natural_lang	../bot2017.py	/^def query_natural_lang(bot,update):$/;"	kind:function	line:213
+quit	../NEMbox/cache.py	/^    def quit(self):$/;"	kind:member	line:123
+random	../NEMbox/api.py	/^import random$/;"	kind:namespace	line:27
+random	../NEMbox/player.py	/^import random$/;"	kind:namespace	line:24
+random	../translate.py	/^import requests,hashlib,random,sys$/;"	kind:namespace	line:7
+range	../NEMbox/api.py	/^from builtins import range$/;"	kind:namespace	line:16
+range	../NEMbox/menu.py	/^from builtins import range$/;"	kind:namespace	line:12
+range	../NEMbox/player.py	/^from builtins import range$/;"	kind:namespace	line:14
+range	../NEMbox/ui.py	/^from builtins import range$/;"	kind:namespace	line:12
+rawHttpRequest	../NEMbox/api.py	/^    def rawHttpRequest(self,$/;"	kind:member	line:218
+re	../NEMbox/api.py	/^import re$/;"	kind:namespace	line:22
+re	../NEMbox/player.py	/^import re$/;"	kind:namespace	line:25
+re	../NEMbox/ui.py	/^import re$/;"	kind:namespace	line:18
+re	../btdiggTop10.py	/^import re$/;"	kind:namespace	line:3
+re	../pixiv_auto_get.py	/^import re$/;"	kind:namespace	line:1
+re	../pixiv_auto_get0.py	/^import re$/;"	kind:namespace	line:1
+readPic	../description.py	/^def readPic(filePath):$/;"	kind:function	line:10
+readPic	../ocr.py	/^def readPic(filePath):$/;"	kind:function	line:12
+recall	../NEMbox/player.py	/^    def recall(self):$/;"	kind:member	line:230
+receive_mail	../mail.py	/^def receive_mail(Subject=None,From=None,Timeperiod=None):$/;"	kind:function	line:130
+recommend_playlist	../NEMbox/api.py	/^    def recommend_playlist(self):$/;"	kind:member	line:304
+refresh_lyrics	../NEMbox/osdlyrics.py	/^        def refresh_lyrics(self, text):$/;"	kind:member	line:113
+repeat	../bot2017.py	/^def repeat(bot,update):$/;"	kind:function	line:209
+request	../bingsearch.py	/^import urllib.request$/;"	kind:namespace	line:3
+request	../description.py	/^import urllib.request$/;"	kind:namespace	line:4
+request	../netease_music_lib.py	/^import urllib.request$/;"	kind:namespace	line:5
+request	../ocr.py	/^import urllib.request$/;"	kind:namespace	line:4
+request	../pixiv_auto_get.py	/^import urllib.request$/;"	kind:namespace	line:5
+request	../shortlink.py	/^import urllib.request$/;"	kind:namespace	line:3
+request	../tag.py	/^import urllib.request$/;"	kind:namespace	line:4
+request	../weatherinfo.py	/^import urllib.request$/;"	kind:namespace	line:4
+request_api	../NEMbox/menu.py	/^    def request_api(self, func, *args):$/;"	kind:member	line:802
+requests	../NEMbox/api.py	/^import requests$/;"	kind:namespace	line:34
+requests	../bingsearch.py	/^import requests,json,os,sys,urllib$/;"	kind:namespace	line:4
+requests	../btdiggTop10.py	/^import requests$/;"	kind:namespace	line:8
+requests	../description.py	/^import requests$/;"	kind:namespace	line:7
+requests	../netease_music_lib.py	/^import requests$/;"	kind:namespace	line:7
+requests	../qna.py	/^import requests,sys$/;"	kind:namespace	line:2
+requests	../translate.py	/^import requests,hashlib,random,sys$/;"	kind:namespace	line:7
+resume	../NEMbox/player.py	/^    def resume(self):$/;"	kind:member	line:349
+return_toplists	../NEMbox/api.py	/^    def return_toplists(self):$/;"	kind:member	line:203
+rsaEncrypt	../NEMbox/api.py	/^def rsaEncrypt(text, pubKey, modulus):$/;"	kind:function	line:114
+runInThread	../NEMbox/player.py	/^        def runInThread(onExit, arg):$/;"	kind:function	line:69
+save	../NEMbox/storage.py	/^    def save(self):$/;"	kind:member	line:121
+save_config_file	../NEMbox/config.py	/^    def save_config_file(self):$/;"	kind:member	line:145
+scrollstring	../NEMbox/scrollstring.py	/^class scrollstring(object):$/;"	kind:class	line:15
+scrollstring	../NEMbox/ui.py	/^from .scrollstring import truelen, scrollstring$/;"	kind:namespace	line:22
+scrollstring.py	../NEMbox/scrollstring.py	1;"	kind:file	line:1
+search	../NEMbox/api.py	/^    def search(self, s, stype=1, offset=0, total='true', limit=60):$/;"	kind:member	line:370
+search	../bingsearch.py	/^def search(query):$/;"	kind:function	line:9
+search_song_by_name	../netease_music_lib.py	/^    def search_song_by_name(self, name, artist):$/;"	kind:member	line:27
+secret	../description.py	/^secret = "TAyCUwTyc2NkQeE6aTVIvmWJXqVhj5ZI"$/;"	kind:variable	line:9
+send	../mail.py	/^def send(smtp_host,mail_user,mail_pass,to_list,subject,text=None,image=None,attachment=None):$/;"	kind:function	line:36
+send_kill	../NEMbox/menu.py	/^    def send_kill(self, signum, fram):$/;"	kind:member	line:140
+send_mail	../mail.py	/^def send_mail(to_list,subject,text=None,image=None,attachment=None):$/;"	kind:function	line:83
+send_mail_proc	../bot2017.py	/^def send_mail_proc(bot,update):$/;"	kind:function	line:155
+send_mail_proc	../qna.py	/^def send_mail_proc(bot,update):$/;"	kind:function	line:147
+setup_mail_config	../bot2017.py	/^def setup_mail_config(bot,update):$/;"	kind:function	line:132
+setup_mail_config	../qna.py	/^def setup_mail_config(bot,update):$/;"	kind:function	line:124
+shlex	../NEMbox/terminalsize.py	/^import shlex$/;"	kind:namespace	line:10
+shortcut	../NEMbox/menu.py	/^shortcut = [$/;"	kind:variable	line:69
+shortlink	../bot2017.py	/^import shortlink$/;"	kind:namespace	line:10
+shortlink	../qna.py	/^import shortlink$/;"	kind:namespace	line:11
+shortlink	../shortlink.py	/^def shortlink(longlink):$/;"	kind:function	line:4
+shortlink.py	../shortlink.py	1;"	kind:file	line:1
+shortlink_proc	../bot2017.py	/^def shortlink_proc(bot,update):$/;"	kind:function	line:176
+shortlink_proc	../qna.py	/^def shortlink_proc(bot,update):$/;"	kind:function	line:168
+shortlink_request	../bot2017.py	/^def shortlink_request(bot,update):$/;"	kind:function	line:173
+shortlink_request	../qna.py	/^def shortlink_request(bot,update):$/;"	kind:function	line:165
+show_lyrics	../NEMbox/osdlyrics.py	/^    def show_lyrics():$/;"	kind:function	line:117
+show_lyrics_new_process	../NEMbox/menu.py	/^from .osdlyrics import show_lyrics_new_process$/;"	kind:namespace	line:32
+show_lyrics_new_process	../NEMbox/osdlyrics.py	/^def show_lyrics_new_process():$/;"	kind:function	line:126
+show_playing_song	../NEMbox/menu.py	/^    def show_playing_song(self):$/;"	kind:member	line:755
+shuffle	../NEMbox/player.py	/^    def shuffle(self):$/;"	kind:member	line:469
+signal	../NEMbox/cache.py	/^import signal$/;"	kind:namespace	line:18
+signal	../NEMbox/menu.py	/^import signal$/;"	kind:namespace	line:23
+singleton.py	../NEMbox/singleton.py	1;"	kind:file	line:1
+smtplib	../mail.py	/^import smtplib$/;"	kind:namespace	line:4
+song_changed_callback	../NEMbox/menu.py	/^    def song_changed_callback(self):$/;"	kind:member	line:780
+song_comments	../NEMbox/api.py	/^    def song_comments(self, music_id, offset=0, total='fasle', limit=100):$/;"	kind:member	line:488
+song_detail	../NEMbox/api.py	/^    def song_detail(self, music_id):$/;"	kind:member	line:535
+song_lyric	../NEMbox/api.py	/^    def song_lyric(self, music_id):$/;"	kind:member	line:546
+song_proc	../bot2017.py	/^def song_proc(bot,update):$/;"	kind:function	line:251
+song_proc	../qna.py	/^def song_proc(bot,update):$/;"	kind:function	line:196
+song_request	../bot2017.py	/^def song_request(bot,update):$/;"	kind:function	line:248
+song_tlyric	../NEMbox/api.py	/^    def song_tlyric(self, music_id):$/;"	kind:member	line:560
+songs_detail	../NEMbox/api.py	/^    def songs_detail(self, ids, offset=0):$/;"	kind:member	line:499
+songs_detail_new_api	../NEMbox/api.py	/^    def songs_detail_new_api(self, music_ids, bit_rate=320000):$/;"	kind:member	line:517
+speech.py	../speech.py	1;"	kind:file	line:1
+standard_library	../NEMbox/api.py	/^from future import standard_library$/;"	kind:namespace	line:19
+standard_library	../NEMbox/cache.py	/^from future import standard_library$/;"	kind:namespace	line:12
+standard_library	../NEMbox/config.py	/^from future import standard_library$/;"	kind:namespace	line:8
+standard_library	../NEMbox/const.py	/^from future import standard_library$/;"	kind:namespace	line:7
+standard_library	../NEMbox/logger.py	/^from future import standard_library$/;"	kind:namespace	line:11
+standard_library	../NEMbox/menu.py	/^from future import standard_library$/;"	kind:namespace	line:14
+standard_library	../NEMbox/osdlyrics.py	/^from future import standard_library$/;"	kind:namespace	line:11
+standard_library	../NEMbox/player.py	/^from future import standard_library$/;"	kind:namespace	line:16
+standard_library	../NEMbox/scrollstring.py	/^from future import standard_library$/;"	kind:namespace	line:10
+standard_library	../NEMbox/storage.py	/^from future import standard_library$/;"	kind:namespace	line:12
+standard_library	../NEMbox/terminalsize.py	/^from future import standard_library$/;"	kind:namespace	line:7
+standard_library	../NEMbox/ui.py	/^from future import standard_library$/;"	kind:namespace	line:15
+standard_library	../NEMbox/utils.py	/^from future import standard_library$/;"	kind:namespace	line:11
+start	../NEMbox/menu.py	/^    def start(self):$/;"	kind:member	line:215
+start	../bot2017.py	/^def start(bot, update):$/;"	kind:function	line:24
+start_download	../NEMbox/cache.py	/^    def start_download(self):$/;"	kind:member	line:65
+start_fork	../NEMbox/menu.py	/^    def start_fork(self, version):$/;"	kind:member	line:172
+start_mail_request	../bot2017.py	/^def start_mail_request(bot,update):$/;"	kind:function	line:109
+start_mail_request	../qna.py	/^def start_mail_request(bot,update):$/;"	kind:function	line:101
+status_code.py	../status_code.py	1;"	kind:file	line:1
+stop	../NEMbox/player.py	/^    def stop(self):$/;"	kind:member	line:320
+storage.py	../NEMbox/storage.py	1;"	kind:file	line:1
+storage_path	../NEMbox/const.py	/^    storage_path = os.path.join(conf_dir, 'database.json')$/;"	kind:variable	line:16
+str	../NEMbox/api.py	/^from builtins import str$/;"	kind:namespace	line:17
+str	../NEMbox/cache.py	/^from builtins import str$/;"	kind:namespace	line:11
+str	../NEMbox/menu.py	/^from builtins import str$/;"	kind:namespace	line:13
+str	../NEMbox/player.py	/^from builtins import str$/;"	kind:namespace	line:15
+str	../NEMbox/ui.py	/^from builtins import str$/;"	kind:namespace	line:13
+str	../NEMbox/utils.py	/^from builtins import str$/;"	kind:namespace	line:10
+struct	../NEMbox/terminalsize.py	/^import struct$/;"	kind:namespace	line:11
+subprocess	../NEMbox/cache.py	/^import subprocess$/;"	kind:namespace	line:16
+subprocess	../NEMbox/player.py	/^import subprocess$/;"	kind:namespace	line:20
+subprocess	../NEMbox/terminalsize.py	/^import subprocess$/;"	kind:namespace	line:13
+subprocess	../NEMbox/utils.py	/^import subprocess$/;"	kind:namespace	line:15
+succ	../NEMbox/cache.py	/^        def succ(x):$/;"	kind:function	line:47
+super	../NEMbox/osdlyrics.py	/^from builtins import super$/;"	kind:namespace	line:10
+switch	../NEMbox/player.py	/^    def switch(self):$/;"	kind:member	line:314
+sys	../NEMbox/menu.py	/^import sys$/;"	kind:namespace	line:20
+sys	../NEMbox/osdlyrics.py	/^import sys$/;"	kind:namespace	line:13
+sys	../bingsearch.py	/^import requests,json,os,sys,urllib$/;"	kind:namespace	line:4
+sys	../description.py	/^import sys,json,os,urllib$/;"	kind:namespace	line:2
+sys	../netease_music_lib.py	/^import json,sys$/;"	kind:namespace	line:2
+sys	../ocr.py	/^import sys,json,os,urllib$/;"	kind:namespace	line:2
+sys	../qna.py	/^import requests,sys$/;"	kind:namespace	line:2
+sys	../shortlink.py	/^import json,sys,urllib$/;"	kind:namespace	line:1
+sys	../tag.py	/^import sys,json,os,urllib$/;"	kind:namespace	line:2
+sys	../translate.py	/^import requests,hashlib,random,sys$/;"	kind:namespace	line:7
+sys	../weatherinfo.py	/^import sys,json,urllib$/;"	kind:namespace	line:2
+tag.py	../tag.py	1;"	kind:file	line:1
+terminalsize	../NEMbox/ui.py	/^from . import terminalsize$/;"	kind:namespace	line:27
+terminalsize.py	../NEMbox/terminalsize.py	1;"	kind:file	line:1
+termios	../NEMbox/terminalsize.py	/^            import termios$/;"	kind:namespace	line:78
+test_to_list	../mail.py	/^	test_to_list=mail_user$/;"	kind:variable	line:244
+threading	../NEMbox/cache.py	/^import threading$/;"	kind:namespace	line:15
+threading	../NEMbox/menu.py	/^import threading$/;"	kind:namespace	line:19
+threading	../NEMbox/player.py	/^import threading$/;"	kind:namespace	line:21
+time	../NEMbox/api.py	/^import time$/;"	kind:namespace	line:25
+time	../NEMbox/menu.py	/^import time$/;"	kind:namespace	line:15
+time	../NEMbox/menu.py	/^import time$/;"	kind:namespace	line:22
+time	../NEMbox/player.py	/^import time$/;"	kind:namespace	line:22
+time	../NEMbox/scrollstring.py	/^from time import time$/;"	kind:namespace	line:12
+time	../description.py	/^import time$/;"	kind:namespace	line:5
+time	../mail.py	/^	import time$/;"	kind:namespace	line:250
+top_artists	../NEMbox/api.py	/^    def top_artists(self, offset=0, limit=100):$/;"	kind:member	line:430
+top_list_all	../NEMbox/api.py	/^top_list_all = {$/;"	kind:variable	line:42
+top_playlists	../NEMbox/api.py	/^    def top_playlists(self, category='全部', order='hot', offset=0, limit=50):$/;"	kind:member	line:393
+top_songlist	../NEMbox/api.py	/^    def top_songlist(self, idx=0, offset=0, limit=100):$/;"	kind:member	line:441
+translate	../bot2017.py	/^import translate$/;"	kind:namespace	line:13
+translate	../qna.py	/^import translate$/;"	kind:namespace	line:14
+translate	../translate.py	/^def translate(q,fromLang = 'auto',toLang = 'zh'):$/;"	kind:function	line:51
+translate.py	../translate.py	1;"	kind:file	line:1
+translate_request	../bot2017.py	/^def translate_request(bot,update):$/;"	kind:function	line:187
+translate_request	../qna.py	/^def translate_request(bot,update):$/;"	kind:function	line:179
+truelen	../NEMbox/scrollstring.py	/^def truelen(string):$/;"	kind:function	line:43
+truelen	../NEMbox/ui.py	/^from .scrollstring import truelen, scrollstring$/;"	kind:namespace	line:22
+ui.py	../NEMbox/ui.py	1;"	kind:file	line:1
+unbind_keys	../NEMbox/menu.py	/^    def unbind_keys(self):$/;"	kind:member	line:209
+unicode_literals	../NEMbox/api.py	/^from __future__ import unicode_literals$/;"	kind:namespace	line:9
+unicode_literals	../NEMbox/cache.py	/^from __future__ import unicode_literals$/;"	kind:namespace	line:7
+unicode_literals	../NEMbox/config.py	/^from __future__ import unicode_literals$/;"	kind:namespace	line:3
+unicode_literals	../NEMbox/const.py	/^from __future__ import unicode_literals$/;"	kind:namespace	line:3
+unicode_literals	../NEMbox/logger.py	/^from __future__ import unicode_literals$/;"	kind:namespace	line:6
+unicode_literals	../NEMbox/menu.py	/^from __future__ import unicode_literals$/;"	kind:namespace	line:8
+unicode_literals	../NEMbox/osdlyrics.py	/^from __future__ import unicode_literals$/;"	kind:namespace	line:6
+unicode_literals	../NEMbox/player.py	/^from __future__ import unicode_literals$/;"	kind:namespace	line:10
+unicode_literals	../NEMbox/scrollstring.py	/^from __future__ import unicode_literals$/;"	kind:namespace	line:5
+unicode_literals	../NEMbox/storage.py	/^from __future__ import unicode_literals$/;"	kind:namespace	line:7
+unicode_literals	../NEMbox/terminalsize.py	/^from __future__ import unicode_literals$/;"	kind:namespace	line:3
+unicode_literals	../NEMbox/ui.py	/^from __future__ import unicode_literals$/;"	kind:namespace	line:9
+unicode_literals	../NEMbox/utils.py	/^from __future__ import unicode_literals$/;"	kind:namespace	line:6
+uniq	../NEMbox/api.py	/^def uniq(arr):$/;"	kind:function	line:125
+update	../NEMbox/scrollstring.py	/^    def update(self):$/;"	kind:member	line:23
+update_alert	../NEMbox/menu.py	/^    def update_alert(self, version):$/;"	kind:member	line:147
+update_size	../NEMbox/player.py	/^    def update_size(self):$/;"	kind:member	line:505
+update_size	../NEMbox/ui.py	/^    def update_size(self):$/;"	kind:member	line:648
+update_space	../NEMbox/ui.py	/^    def update_space(self):$/;"	kind:member	line:665
+urllib	../bingsearch.py	/^import requests,json,os,sys,urllib$/;"	kind:namespace	line:4
+urllib	../bingsearch.py	/^import urllib.parse$/;"	kind:namespace	line:2
+urllib	../bingsearch.py	/^import urllib.request$/;"	kind:namespace	line:3
+urllib	../bot2017.py	/^import logging,os,urllib,json$/;"	kind:namespace	line:4
+urllib	../btdiggTop10.py	/^import urllib$/;"	kind:namespace	line:5
+urllib	../description.py	/^import sys,json,os,urllib$/;"	kind:namespace	line:2
+urllib	../description.py	/^import urllib.parse$/;"	kind:namespace	line:3
+urllib	../description.py	/^import urllib.request$/;"	kind:namespace	line:4
+urllib	../netease_music_lib.py	/^import urllib$/;"	kind:namespace	line:3
+urllib	../netease_music_lib.py	/^import urllib.parse$/;"	kind:namespace	line:4
+urllib	../netease_music_lib.py	/^import urllib.request$/;"	kind:namespace	line:5
+urllib	../ocr.py	/^import sys,json,os,urllib$/;"	kind:namespace	line:2
+urllib	../ocr.py	/^import urllib.parse$/;"	kind:namespace	line:3
+urllib	../ocr.py	/^import urllib.request$/;"	kind:namespace	line:4
+urllib	../pixiv_auto_get.py	/^import urllib$/;"	kind:namespace	line:3
+urllib	../pixiv_auto_get.py	/^import urllib.parse$/;"	kind:namespace	line:4
+urllib	../pixiv_auto_get.py	/^import urllib.request$/;"	kind:namespace	line:5
+urllib	../pixiv_auto_get0.py	/^import urllib$/;"	kind:namespace	line:3
+urllib	../qna.py	/^import logging,os,urllib,json$/;"	kind:namespace	line:16
+urllib	../shortlink.py	/^import json,sys,urllib$/;"	kind:namespace	line:1
+urllib	../shortlink.py	/^import urllib.parse$/;"	kind:namespace	line:2
+urllib	../shortlink.py	/^import urllib.request$/;"	kind:namespace	line:3
+urllib	../tag.py	/^import sys,json,os,urllib$/;"	kind:namespace	line:2
+urllib	../tag.py	/^import urllib.parse$/;"	kind:namespace	line:3
+urllib	../tag.py	/^import urllib.request$/;"	kind:namespace	line:4
+urllib	../weatherinfo.py	/^import sys,json,urllib$/;"	kind:namespace	line:2
+urllib	../weatherinfo.py	/^import urllib.parse$/;"	kind:namespace	line:3
+urllib	../weatherinfo.py	/^import urllib.request$/;"	kind:namespace	line:4
+urllib2	../pixiv_auto_get0.py	/^import urllib2$/;"	kind:namespace	line:4
+user_playlist	../NEMbox/api.py	/^    def user_playlist(self, uid, offset=0, limit=100):$/;"	kind:member	line:293
+utf8_data_to_file	../NEMbox/config.py	/^from .utils import utf8_data_to_file$/;"	kind:namespace	line:16
+utf8_data_to_file	../NEMbox/storage.py	/^from .utils import utf8_data_to_file$/;"	kind:namespace	line:18
+utf8_data_to_file	../NEMbox/utils.py	/^def utf8_data_to_file(f, data):$/;"	kind:function	line:19
+utils.py	../NEMbox/utils.py	1;"	kind:file	line:1
+volume_down	../NEMbox/player.py	/^    def volume_down(self):$/;"	kind:member	line:491
+volume_up	../NEMbox/player.py	/^    def volume_up(self):$/;"	kind:member	line:477
+weather_proc	../bot2017.py	/^def weather_proc(bot,update):$/;"	kind:function	line:183
+weather_proc	../qna.py	/^def weather_proc(bot,update):$/;"	kind:function	line:175
+weather_request	../bot2017.py	/^def weather_request(bot,update):$/;"	kind:function	line:180
+weather_request	../qna.py	/^def weather_request(bot,update):$/;"	kind:function	line:172
+weatherinfo	../bot2017.py	/^import weatherinfo$/;"	kind:namespace	line:11
+weatherinfo	../qna.py	/^import weatherinfo$/;"	kind:namespace	line:12
+weatherinfo	../weatherinfo.py	/^def weatherinfo(cityname):$/;"	kind:function	line:17
+weatherinfo.py	../weatherinfo.py	1;"	kind:file	line:1
+webbrowser	../NEMbox/menu.py	/^import webbrowser$/;"	kind:namespace	line:24
+wheelEvent	../NEMbox/osdlyrics.py	/^        def wheelEvent(self, event):$/;"	kind:member	line:79
+windll	../NEMbox/terminalsize.py	/^        from ctypes import windll, create_string_buffer$/;"	kind:namespace	line:44
+xml	../NEMbox/menu.py	/^import xml.etree.cElementTree as ET$/;"	kind:namespace	line:26
