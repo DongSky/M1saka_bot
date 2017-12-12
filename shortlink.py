@@ -8,8 +8,8 @@ def shortlink(longlink):
     req.add_header("apikey", "your key")
 
     resp = urllib.request.urlopen(req)
-    dic1=json.loads(resp.read())
-    print(dic1['urls'][0]['url_short'])
+    dic1=json.loads(resp.read().decode("utf-8"))
+    #print(dic1['urls'][0]['url_short'])
     return dic1['urls'][0]['url_short']
 
 if __name__=='__main__':

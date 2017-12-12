@@ -50,8 +50,8 @@ def is_chinese(s):
 
 def translate(q,fromLang = 'auto',toLang = 'zh'):
 
-    appid = 'appid'
-    secretKey = 'key'
+    appid = 'your appid'
+    secretKey = 'your secret key'
 
     myurl = 'http://api.fanyi.baidu.com/api/trans/vip/translate'
     salt = random.randint(32768, 65536)

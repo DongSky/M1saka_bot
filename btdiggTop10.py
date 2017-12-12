@@ -24,10 +24,10 @@ def btdiggtop10get(link):
     headers={}
     headers["Accept"]="text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8"
     headers["Connection"]="keep-alive"
-    headers["Referer"]="http://btdigg.co/"
+    headers["Referer"]="http://btdigg.xyz/"
     headers["User-Agent"]="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"
     #print(headers)
-    request1=requests.post("http://btdigg.co/",data={"keyword":link},headers=headers)
+    request1=requests.post("http://btdigg.xyz/",data={"keyword":link},headers=headers)
     str1=request1.content
     #print(b)
     #contentlist=re.findall(symbol0,b)
@@ -77,7 +77,7 @@ def btdiggtop10get(link):
             i+=1
         return outputlist
 if __name__=="__main__":
-    btdiggtop10get("冰果")
+    btdiggtop10get("ABP-521")
 #    while i<10:
 #        outputlist.append(titlelist[i]+'\n'+magnetlist[i])
 #        i=i+1

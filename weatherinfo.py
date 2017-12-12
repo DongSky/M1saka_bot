@@ -27,12 +27,12 @@ def weatherinfo(cityname):
     request1=urllib.request.Request(url1)
     data=urllib.request.urlopen(request1).read()
     js_dict=json.loads(data.decode('utf-8'))
-    print(js_dict)
+    #print(js_dict)
     content=''
     for item in js_dict['results'][0]['daily']:
         str1=item['date']+":day "+item['text_day']+", night "+item['text_night']+", "+item['high']+'/'+item['low']+' degree(C)\n'
         content+=str1
-    print(content)
+    #print(content)
     return content
 
 if __name__=="__main__":

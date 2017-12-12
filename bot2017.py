@@ -4,15 +4,17 @@ from telegram.ext import (Updater, CommandHandler, MessageHandler, Filters, Rege
 import logging,os,urllib,json
 import pixiv_auto_get
 import description
-import tag
+#import tag
 import ocr
 import mail
 import shortlink
 import weatherinfo
 import btdiggTop10
 import translate
+import qna
+from status_code import *
 import netease_music_lib
-import bingsearch
+#import bingsearch
 #initialize logging module
 
 logging.basicConfig(format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",level=logging.INFO)
@@ -21,6 +23,8 @@ logger=logging.getLogger(__name__)
 #    some modules
 def start(bot, update):
     update.message.reply_text('Hi!')
+def echo_request(bot, update):
+    update.message.reply_text('hello world')
 
 def photo(bot, update):
     print("photo in")
@@ -54,6 +58,7 @@ def btdigg_get(bot,update):
     return ConversationHandler.END
 
 def pixivget(bot, update):
+    update.message
     pic_get=pixiv_auto_get.pixiv_auto_get(pixiv_id=update.message.text.split("$")[1])
     for pic_pos in pic_get:
         update.message.reply_photo(open(pic_pos,"rb"))
@@ -88,17 +93,7 @@ def cognitive_description_proc(bot,update):
     output=description.Description('test_photo.jpg')
     update.message.reply_text(output)
     return ConversationHandler.END
-def cognitive_category_request(bot,update):
-    update.message.reply_text("give me a photo")
-    return 1
-def cognitive_category_proc(bot,update):
-    user=update.message.from_user
-    photo_file=bot.get_file(update.message.photo[-1].file_id)
-    photo_file.download("test_photo.jpg")
-    logger.info("Photo of %s: %s" % (user.first_name, 'test_photo.jpg'))
-    output=tag.Tag('test_photo.jpg')
-    update.message.reply_text(output)
-    return ConversationHandler.END
+
 def cognitive_ocr_request(bot,update):
     update.message.reply_text("give me a photo")
     return 1
@@ -196,43 +191,87 @@ def translate_request(bot,update):
     update.message.reply_text(translate.lang_list)
     return 1
 def lang_proc(bot,update):
+    if not os.path.exists('translate'):
+        os.makedirs('translate')
     f=open('translate/'+str(update.message.from_user.id)+'.txt','w')
     f.write(update.message.text)
     f.close()
     update.message.reply_text('give me the content to be translated')
     return 2
 def content_proc(bot,update):
+    if not os.path.exists('translate'):
+        os.makedirs('translate')
     content=update.message.text
     lang=open('translate/'+str(update.message.from_user.id)+'.txt','r').read()
     update.message.reply_text(translate.translate(q=content,toLang=lang))
     return ConversationHandler.END
 
+def repeat(bot,update):
+    update.message.reply_text(update.message.text)
+# def chinese_debug(bot,update):
+#     print(update.message.text)
+def query_natural_lang(bot,update):
+    if update.message.chat.type != "private":
+        return ConversationHandler.END
+    ans = qna.qna_request(update.message.text)
+    if ans == "No good match found in the KB":
+        return ConversationHandler.END
+    elif ans == "command:mail":
+        return QNA_COMMAND_MAIL
+    elif ans == "command:pixiv":
+        update.message.reply_text("give me pixiv pic id")
+        return QNA_COMMAND_PIXIV
+    elif ans == "command:ocr":
+        update.message.reply_text("give me a photo")
+        return QNA_COMMAND_OCR
+    elif ans == "command:description":
+        update.message.reply_text("give me a photo")
+        return QNA_COMMAND_DESCRIPTION
+    elif ans == "command:btdigg":
+        update.message.reply_text("input the  search content")
+        return QNA_COMMAND_BTDIGG
+    elif ans == "command:shortlink":
+        update.message.reply_text("give me a link")
+        return QNA_COMMAND_SHORTLINK
+    elif ans == "command:translate":
+        update.message.reply_text("input the language")
+        update.message.reply_text(translate.lang_list)
+        return QNA_COMMAND_TRANSLATE
+    elif ans == "command:weather":
+        update.message.reply_text("give me the city name in Chinese")
+        return QNA_COMMAND_WEATHER
+    elif ans == "command:song":
+        update.message.reply_text("give me the song name")
+        return QNA_COMMAND_SONG
+def do_nothing(bot,update):
+    pass
 def song_request(bot,update):
     update.message.reply_text('give me the name of song')
     return 1
 def song_proc(bot,update):
     Netease=netease_music_lib.NeteaseMusic()
-    link=Netease.get_song_info_by_name(update.message.text)[-1]
+    info = Netease.get_song_info_by_name(update.message.text)
+    link = info[-1]
     if not link==None:
         data=urllib.request.urlopen(link).read()
-        update.message.reply_audio(data)
+        fileName = link.split("/")[-1]
+        print(fileName)
+        with open(fileName,"wb") as f:
+            f.write(data)
+            f.close()
+        with open(fileName,"rb") as f:
+            bot.send_audio(update.message.chat_id,audio=f,title=info[1],performer=info[2],timeout=60)
+        #print(link)
+        
     else:
         update.message.reply_text('could not fetch this song')
     return ConversationHandler.END
 
-def bing_search_request(bot,update):
-    update.message.reply_text("input the search content")
-    return 1
-def bing_search_proc(bot,update):
-    reply=bingsearch.search(update.message.text)
-    update.message.reply_text(reply)
-    return ConversationHandler.END
-# def chinese_debug(bot,update):
-#     print(update.message.text)
+
 
 #Main function
 def main():
-    updater=Updater("your token")
+    updater=Updater("your config")
     dp=updater.dispatcher
 
     btdigg_conv_handler=ConversationHandler(entry_points=[CommandHandler("btdigg",btdigg_start)],
@@ -250,13 +289,6 @@ def main():
     description_conv_handler=ConversationHandler(entry_points=[CommandHandler("description",cognitive_description_request)],
     states={
         1:[MessageHandler(Filters.photo,cognitive_description_proc)]
-    },
-    fallbacks=[CommandHandler('cancel', cancel)]
-    )
-
-    category_conv_handler=ConversationHandler(entry_points=[CommandHandler("category",cognitive_category_request)],
-    states={
-        1:[MessageHandler(Filters.photo,cognitive_category_proc)]
     },
     fallbacks=[CommandHandler('cancel', cancel)]
     )
@@ -302,26 +334,33 @@ def main():
     fallbacks=[CommandHandler('cancel', cancel)]
     )
 
-    bing_search_handler=ConversationHandler(entry_points=[CommandHandler("search",bing_search_request)],
-    states={
-        1:[MessageHandler(Filters.text,bing_search_proc)]
-    },
-    fallbacks=[CommandHandler('cancel', cancel)]
-    )
+    echo_handler = ConversationHandler(entry_points=[CommandHandler("echo",echo_request)],states={},fallbacks=[CommandHandler('cancel',cancel)])
 
+    natural_lang_handler = ConversationHandler(entry_points=[MessageHandler(Filters.text,query_natural_lang)],states={
+        QNA_COMMAND_TRANSLATE:[MessageHandler(Filters.text,qna.lang_proc)],
+        QNA_COMMAND_TRANSLATE+1:[MessageHandler(Filters.text,qna.content_proc)],
+        QNA_COMMAND_BTDIGG:[MessageHandler(Filters.text,qna.btdigg_get)],
+        QNA_COMMAND_SHORTLINK:[MessageHandler(Filters.text,qna.shortlink_proc)],
+        QNA_COMMAND_WEATHER:[MessageHandler(Filters.text,qna.weather_proc)],
+        QNA_COMMAND_OCR:[MessageHandler(Filters.photo,qna.cognitive_ocr_proc)],
+        QNA_COMMAND_SONG:[MessageHandler(Filters.text,qna.song_proc)],
+        QNA_COMMAND_DESCRIPTION:[MessageHandler(Filters.photo,qna.cognitive_description_proc)]
+    },
+    fallbacks=[CommandHandler('cancel',cancel)])
+
+    dp.add_handler(echo_handler)
     dp.add_handler(mail_send_handler)
     dp.add_handler(btdigg_conv_handler)
     dp.add_handler(pixiv_get_conv_handler)
     dp.add_handler(description_conv_handler)
-    dp.add_handler(category_conv_handler)
     dp.add_handler(ocr_conv_handler)
     dp.add_handler(short_link_handler)
     dp.add_handler(weather_info_handler)
     dp.add_handler(translate_handler)
     dp.add_handler(song_handler)
-    dp.add_handler(bing_search_handler)
     dp.add_handler(CommandHandler("start",start))
     dp.add_handler(CommandHandler("clearmailconfig",clear_mail_config))
+    dp.add_handler(natural_lang_handler)
     #dp.add_handler(RegexHandler(r"/cn.+?",chinese_debug))
     #dp.add_handler(RegexHandler(r"/pixiv.+?",pixivget))
     #dp.add_handler(MessageHandler(Filters.photo,photo))

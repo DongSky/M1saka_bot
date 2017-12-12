@@ -1,5 +1,5 @@
 # coding=utf-8
-import json
+import json,sys
 import urllib
 import urllib.parse
 import urllib.request
@@ -55,5 +55,5 @@ class NeteaseMusic(object):
 
 if __name__ == '__main__':
     app = NeteaseMusic()
-    print(app.get_song_info_by_name('届かない恋'))
-    print(app.get_song_info_by_id(725692))
+    print(app.get_song_info_by_name(" ".join(sys.argv[1:])))
+    #print(app.get_song_info_by_id(725692))
