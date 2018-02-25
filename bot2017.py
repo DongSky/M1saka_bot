@@ -14,6 +14,7 @@ import translate
 import qna
 from status_code import *
 import netease_music_lib
+import NHentai
 #import bingsearch
 #initialize logging module
 
@@ -265,11 +266,65 @@ def song_proc(bot,update):
         with open(fileName,"rb") as f:
             bot.send_audio(update.message.chat_id,audio=f,title=info[1],performer=info[2],timeout=60)
         #print(link)
-        
+
     else:
         update.message.reply_text('could not fetch this song')
     return ConversationHandler.END
-
+def nhentai_request(bot,update):
+    update.message.reply_text("send random to get random manga, send id to download specific manga, send search to find manga with some keywords, send popsearch to find manga with popular rate descending order")
+    return 1
+def nhentai_proc(bot,update):
+    content=update.message.text
+    if content == "id":
+        update.message.reply_text("input manga id")
+        return 2
+    elif content == "random":
+        nhentai = NHentai.NHentai()
+        random_book = nhentai.refresh_random()
+        random_book.download_all()
+        download_path = random_book.pack()
+        if not download_path is None:
+            with open(download_path,"rb") as f:
+                bot.send_document(update.message.chat_id,document=f,filename=random_book.title_eng)
+        return ConversationHandler.END
+    elif content == "search":
+        update.message.reply_text("input search content")
+        return 3
+    elif content == "popsearch":
+        update.message.reply_text("input search content")
+        return 4
+def nhentai_id_proc(bot,update):
+    content=update.message.text
+    if content.isdigit():
+        book = NHentai.Book(content)
+        book.download_all()
+        download_path = book.pack()
+        if not download_path is None:
+            with open(download_path,"rb") as f:
+                bot.send_document(update.message.chat_id,document=f,filename=random_book.title_eng)
+    else:
+        update.message.reply_text("invalid id")
+    return ConversationHandler.END
+def nhentai_search_proc(bot,update):
+    content=update.message.text
+    content = content.replace(" ", "+")
+    nhentai = NHentai.NHentai()
+    result = nhentai.search(query=content,is_popular=False)
+    rep_str = ""
+    for _id, title in result:
+        rep_str += " -> ".join([str(_id),str(title)]) + "\n"
+    update.message.reply_text(rep_str)
+    return ConversationHandler.END
+def nhentai_popsearch_proc(bot,update):
+    content=update.message.text
+    content = content.replace(" ", "+")
+    nhentai = NHentai.NHentai()
+    result = nhentai.search(query=content,is_popular=True)
+    rep_str = ""
+    for _id, title in result:
+        rep_str += " -> ".join([str(_id),str(title)]) + "\n"
+    update.message.reply_text(rep_str)
+    return ConversationHandler.END
 
 
 #Main function
@@ -314,6 +369,15 @@ def main():
     short_link_handler=ConversationHandler(entry_points=[CommandHandler("shortlink",shortlink_request)],
     states={
     1:[MessageHandler(Filters.text,shortlink_proc)]
+    },
+    fallbacks=[CommandHandler('cancel', cancel)])
+
+    nhentai_handler=ConversationHandler(entry_points=[CommandHandler("nhentai",nhentai_request)],
+    states={
+    1:[MessageHandler(Filters.text,nhentai_proc)],
+    2:[MessageHandler(Filters.text,nhentai_id_proc)],
+    3:[MessageHandler(Filters.text,nhentai_search_proc)],
+    4:[MessageHandler(Filters.text,nhentai_popsearch_proc)],
     },
     fallbacks=[CommandHandler('cancel', cancel)])
 
@@ -364,6 +428,7 @@ def main():
     dp.add_handler(CommandHandler("start",start))
     dp.add_handler(CommandHandler("clearmailconfig",clear_mail_config))
     dp.add_handler(natural_lang_handler)
+    dp.add_handler(nhentai_handler)
     #dp.add_handler(RegexHandler(r"/cn.+?",chinese_debug))
     #dp.add_handler(RegexHandler(r"/pixiv.+?",pixivget))
     #dp.add_handler(MessageHandler(Filters.photo,photo))
