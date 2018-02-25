@@ -78,8 +78,11 @@ def pixiv_id_request(bot, update):
 def pixiv_id_proc(bot, update):
     update.message.reply_text("searching...")
     pic_get=pixiv_auto_get.pixiv_auto_get(pixiv_id=update.message.text)
-    for pic_pos in pic_get:
-        update.message.reply_photo(open(pic_pos,"rb"))
+    if not pic_get is None:
+        for pic_pos in pic_get:
+            update.message.reply_photo(open(pic_pos,"rb"))
+    else:
+        update.message.reply_text("Not Found or Error")
     return ConversationHandler.END
 
 def cognitive_description_request(bot,update):
