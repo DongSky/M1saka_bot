@@ -301,7 +301,7 @@ def nhentai_id_proc(bot,update):
         download_path = book.pack()
         if not download_path is None:
             with open(download_path,"rb") as f:
-                bot.send_document(update.message.chat_id,document=f,filename=random_book.title_eng)
+                bot.send_document(update.message.chat_id,document=f,filename=book.title_eng)
     else:
         update.message.reply_text("invalid id")
     return ConversationHandler.END
@@ -311,9 +311,12 @@ def nhentai_search_proc(bot,update):
     nhentai = NHentai.NHentai()
     result = nhentai.search(query=content,is_popular=False)
     rep_str = ""
-    for _id, title in result:
-        rep_str += " -> ".join([str(_id),str(title)]) + "\n"
-    update.message.reply_text(rep_str)
+    if len(result) > 0:
+        for _id, title in result:
+            rep_str += " -> ".join([str(_id),str(title)]) + "\n"
+        update.message.reply_text(rep_str)
+    else:
+        update.message.reply_text("No Results Found")
     return ConversationHandler.END
 def nhentai_popsearch_proc(bot,update):
     content=update.message.text
@@ -321,9 +324,12 @@ def nhentai_popsearch_proc(bot,update):
     nhentai = NHentai.NHentai()
     result = nhentai.search(query=content,is_popular=True)
     rep_str = ""
-    for _id, title in result:
-        rep_str += " -> ".join([str(_id),str(title)]) + "\n"
-    update.message.reply_text(rep_str)
+    if len(result) > 0:
+        for _id, title in result:
+            rep_str += " -> ".join([str(_id),str(title)]) + "\n"
+        update.message.reply_text(rep_str)
+    else:
+        update.message.reply_text("No Results Found")
     return ConversationHandler.END
 
 
@@ -415,6 +421,7 @@ def main():
     },
     fallbacks=[CommandHandler('cancel',cancel)])
 
+    dp.add_handler(nhentai_handler)
     dp.add_handler(echo_handler)
     dp.add_handler(mail_send_handler)
     dp.add_handler(btdigg_conv_handler)
@@ -428,7 +435,6 @@ def main():
     dp.add_handler(CommandHandler("start",start))
     dp.add_handler(CommandHandler("clearmailconfig",clear_mail_config))
     dp.add_handler(natural_lang_handler)
-    dp.add_handler(nhentai_handler)
     #dp.add_handler(RegexHandler(r"/cn.+?",chinese_debug))
     #dp.add_handler(RegexHandler(r"/pixiv.+?",pixivget))
     #dp.add_handler(MessageHandler(Filters.photo,photo))

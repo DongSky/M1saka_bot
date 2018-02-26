@@ -2,7 +2,7 @@ import re
 import os
 import requests
 import pathlib
-ACCOUNT = "your id, not email or username"
+ACCOUNT = "your id, not username or email"
 PASSWORD = "your password"
 class PixivGet(object):
     def __init__(self):
@@ -91,9 +91,8 @@ class PixivGet(object):
 def pixiv_auto_get(pixiv_id):
     pixiv = PixivGet()
     pixiv.login()
-    pixiv.pixiv_auto_get(str(pixiv_id))
+    return pixiv.pixiv_auto_get(str(pixiv_id))
 if __name__=="__main__":
     pixiv = PixivGet()
     pixiv.login()
-    pixiv.pixiv_auto_get("67412708")
-
+    pixiv.pixiv_auto_get("65637109")
