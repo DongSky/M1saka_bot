@@ -285,7 +285,7 @@ def nhentai_proc(bot,update):
         download_path = random_book.pack()
         if not download_path is None:
             with open(download_path,"rb") as f:
-                bot.send_document(update.message.chat_id,document=f,filename=random_book.title_eng)
+                bot.send_document(update.message.chat_id,document=f,filename=random_book.title_eng+".zip")
         return ConversationHandler.END
     elif content == "search":
         update.message.reply_text("input search content")
@@ -301,7 +301,7 @@ def nhentai_id_proc(bot,update):
         download_path = book.pack()
         if not download_path is None:
             with open(download_path,"rb") as f:
-                bot.send_document(update.message.chat_id,document=f,filename=book.title_eng)
+                bot.send_document(update.message.chat_id,document=f,filename=book.title_eng+".zip")
     else:
         update.message.reply_text("invalid id")
     return ConversationHandler.END
